@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		D49DC4E01C0F978900BC6569 /* Expression.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Expression.cpp; sourceTree = "<group>"; };
+		D49DC4E11C0F978900BC6569 /* Expression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Expression.hpp; sourceTree = "<group>"; };
+		D49DC4E21C0F97BF00BC6569 /* ArithmeticExpression.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArithmeticExpression.cpp; sourceTree = "<group>"; };
+		D49DC4E31C0F97BF00BC6569 /* ArithmeticExpression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArithmeticExpression.hpp; sourceTree = "<group>"; };
+		D49DC4E41C0F97E600BC6569 /* Addition.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Addition.cpp; sourceTree = "<group>"; };
+		D49DC4E51C0F97E600BC6569 /* Addition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Addition.hpp; sourceTree = "<group>"; };
+		D49DC4E61C0F97F900BC6569 /* Subtraction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Subtraction.cpp; sourceTree = "<group>"; };
+		D49DC4E71C0F97F900BC6569 /* Subtraction.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Subtraction.hpp; sourceTree = "<group>"; };
+		D49DC4E81C0F980C00BC6569 /* Multiplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Multiplication.cpp; sourceTree = "<group>"; };
+		D49DC4E91C0F980C00BC6569 /* Multiplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Multiplication.hpp; sourceTree = "<group>"; };
+		D49DC4EA1C0F981D00BC6569 /* Division.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Division.cpp; sourceTree = "<group>"; };
+		D49DC4EB1C0F981D00BC6569 /* Division.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Division.hpp; sourceTree = "<group>"; };
 		D4FE46271C083BA500440990 /* HWK6_ballesjm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HWK6_ballesjm.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -15,6 +27,18 @@
 			isa = PBXGroup;
 			children = (
 				D4FE46271C083BA500440990 /* HWK6_ballesjm.cpp */,
+				D49DC4E01C0F978900BC6569 /* Expression.cpp */,
+				D49DC4E11C0F978900BC6569 /* Expression.hpp */,
+				D49DC4E21C0F97BF00BC6569 /* ArithmeticExpression.cpp */,
+				D49DC4E31C0F97BF00BC6569 /* ArithmeticExpression.hpp */,
+				D49DC4E41C0F97E600BC6569 /* Addition.cpp */,
+				D49DC4E51C0F97E600BC6569 /* Addition.hpp */,
+				D49DC4E61C0F97F900BC6569 /* Subtraction.cpp */,
+				D49DC4E71C0F97F900BC6569 /* Subtraction.hpp */,
+				D49DC4E81C0F980C00BC6569 /* Multiplication.cpp */,
+				D49DC4E91C0F980C00BC6569 /* Multiplication.hpp */,
+				D49DC4EA1C0F981D00BC6569 /* Division.cpp */,
+				D49DC4EB1C0F981D00BC6569 /* Division.hpp */,
 			);
 			sourceTree = "<group>";
 		};
