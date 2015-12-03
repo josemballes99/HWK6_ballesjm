@@ -8,7 +8,7 @@
 
 #include "ArithmeticExpression.hpp"
 
-//class ArithmeticExpression {
+//class ArithmeticExpression : public Expression {
 //    Expression *left;
 //    Expression *right;
 //    

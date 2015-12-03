@@ -10,5 +10,8 @@
 #define ArithmeticExpression_hpp
 
 #include <stdio.h>
+#include <string>
+
+using namespace std;
 
 #endif /* ArithmeticExpression_hpp */

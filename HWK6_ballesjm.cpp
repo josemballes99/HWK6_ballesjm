@@ -6,12 +6,28 @@
 //
 //
 
-#include <stdio.h>
 #include <iostream>
+#include <math.h>
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include "Expression.cpp"
 
 using namespace std;
 
+string Expression:: evaluate(string input) {
+    
+    return "";
+};
+
 int main(){
-    cout << "Hello World!\n";
+    Expression EXP;
+    string input;
+    
+    cout << "Please Enter an expression: ";
+    cin >> input;
+    
+    EXP.evaluate(input);
+    
     return 0;
 }

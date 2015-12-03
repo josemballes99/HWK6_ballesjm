@@ -10,5 +10,8 @@
 #define Expression_hpp
 
 #include <stdio.h>
+#include <string>
+
+using namespace std;
 
 #endif /* Expression_hpp */
