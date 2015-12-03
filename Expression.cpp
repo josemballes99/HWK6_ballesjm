@@ -8,9 +8,9 @@
 
 #include "Expression.hpp"
 
-class Expression {
-    
-    virtual string evaluate(); // evaluate expression and return string representation of the result.
-    virtual void print();
-    
-};
+//class Expression {
+//    
+//    virtual string evaluate(); // evaluate expression and return string representation of the result.
+//    virtual void print();
+//    
+//};

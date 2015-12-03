@@ -8,7 +8,7 @@
 
 #include "Division.hpp"
 
-class Division: public ArithmeticExpression {
-    string evaluate(){ ... }
-    void print(){ ... } // (left `/` right)
-}
+//class Division: public ArithmeticExpression {
+//    string evaluate(){ ... }
+//    void print(){ ... } // (left `/` right)
+//}

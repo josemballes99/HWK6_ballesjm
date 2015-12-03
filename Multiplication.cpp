@@ -8,8 +8,8 @@
 
 #include "Multiplication.hpp"
 
-//Multiply two expression
-class Multiplication: public ArithmeticExpression {
-    string evaluate(){ ... }
-    void print(){ ... } // (left `*` right)
-}
+////Multiply two expression
+//class Multiplication: public ArithmeticExpression {
+//    string evaluate(){ ... }
+//    void print(){ ... } // (left `*` right)
+//}

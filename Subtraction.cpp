@@ -10,7 +10,7 @@
 
 //Subtract two expression
 
-class Subtraction: public ArithmeticExpression {
-    string evaluate(){ ... }
-    void print(){ ... } // (left `-` right)
-};
+//class Subtraction: public ArithmeticExpression {
+//    string evaluate(){ ... }
+//    void print(){ ... } // (left `-` right)
+//};

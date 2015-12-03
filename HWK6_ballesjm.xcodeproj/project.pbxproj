@@ -6,49 +6,124 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D4E79B741C10045800425A21 /* Addition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E79B671C10045800425A21 /* Addition.cpp */; };
+		D4E79B751C10045800425A21 /* ArithmeticExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E79B691C10045800425A21 /* ArithmeticExpression.cpp */; };
+		D4E79B761C10045800425A21 /* Division.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E79B6B1C10045800425A21 /* Division.cpp */; };
+		D4E79B771C10045800425A21 /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E79B6D1C10045800425A21 /* Expression.cpp */; };
+		D4E79B781C10045800425A21 /* HWK6_ballesjm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E79B6F1C10045800425A21 /* HWK6_ballesjm.cpp */; };
+		D4E79B791C10045800425A21 /* Multiplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E79B701C10045800425A21 /* Multiplication.cpp */; };
+		D4E79B7A1C10045800425A21 /* Subtraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E79B721C10045800425A21 /* Subtraction.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4E79B5D1C0FFDD000425A21 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		D49DC4E01C0F978900BC6569 /* Expression.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Expression.cpp; sourceTree = "<group>"; };
-		D49DC4E11C0F978900BC6569 /* Expression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Expression.hpp; sourceTree = "<group>"; };
-		D49DC4E21C0F97BF00BC6569 /* ArithmeticExpression.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArithmeticExpression.cpp; sourceTree = "<group>"; };
-		D49DC4E31C0F97BF00BC6569 /* ArithmeticExpression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArithmeticExpression.hpp; sourceTree = "<group>"; };
-		D49DC4E41C0F97E600BC6569 /* Addition.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Addition.cpp; sourceTree = "<group>"; };
-		D49DC4E51C0F97E600BC6569 /* Addition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Addition.hpp; sourceTree = "<group>"; };
-		D49DC4E61C0F97F900BC6569 /* Subtraction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Subtraction.cpp; sourceTree = "<group>"; };
-		D49DC4E71C0F97F900BC6569 /* Subtraction.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Subtraction.hpp; sourceTree = "<group>"; };
-		D49DC4E81C0F980C00BC6569 /* Multiplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Multiplication.cpp; sourceTree = "<group>"; };
-		D49DC4E91C0F980C00BC6569 /* Multiplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Multiplication.hpp; sourceTree = "<group>"; };
-		D49DC4EA1C0F981D00BC6569 /* Division.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Division.cpp; sourceTree = "<group>"; };
-		D49DC4EB1C0F981D00BC6569 /* Division.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Division.hpp; sourceTree = "<group>"; };
-		D4FE46271C083BA500440990 /* HWK6_ballesjm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HWK6_ballesjm.cpp; sourceTree = "<group>"; };
+		D4E79B5F1C0FFDD000425A21 /* HWK6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HWK6; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E79B671C10045800425A21 /* Addition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Addition.cpp; sourceTree = SOURCE_ROOT; };
+		D4E79B681C10045800425A21 /* Addition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Addition.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B691C10045800425A21 /* ArithmeticExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArithmeticExpression.cpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6A1C10045800425A21 /* ArithmeticExpression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArithmeticExpression.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6B1C10045800425A21 /* Division.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Division.cpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6C1C10045800425A21 /* Division.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Division.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6D1C10045800425A21 /* Expression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Expression.cpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6E1C10045800425A21 /* Expression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Expression.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6F1C10045800425A21 /* HWK6_ballesjm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HWK6_ballesjm.cpp; sourceTree = SOURCE_ROOT; };
+		D4E79B701C10045800425A21 /* Multiplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Multiplication.cpp; sourceTree = SOURCE_ROOT; };
+		D4E79B711C10045800425A21 /* Multiplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Multiplication.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B721C10045800425A21 /* Subtraction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Subtraction.cpp; sourceTree = SOURCE_ROOT; };
+		D4E79B731C10045800425A21 /* Subtraction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Subtraction.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		D4E79B5C1C0FFDD000425A21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		D4E79B601C0FFDD000425A21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E79B5F1C0FFDD000425A21 /* HWK6 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4E79B611C0FFDD000425A21 /* HWK6 */ = {
+			isa = PBXGroup;
+			children = (
+				D4E79B6F1C10045800425A21 /* HWK6_ballesjm.cpp */,
+				D4E79B671C10045800425A21 /* Addition.cpp */,
+				D4E79B681C10045800425A21 /* Addition.hpp */,
+				D4E79B691C10045800425A21 /* ArithmeticExpression.cpp */,
+				D4E79B6A1C10045800425A21 /* ArithmeticExpression.hpp */,
+				D4E79B6B1C10045800425A21 /* Division.cpp */,
+				D4E79B6C1C10045800425A21 /* Division.hpp */,
+				D4E79B6D1C10045800425A21 /* Expression.cpp */,
+				D4E79B6E1C10045800425A21 /* Expression.hpp */,
+				D4E79B701C10045800425A21 /* Multiplication.cpp */,
+				D4E79B711C10045800425A21 /* Multiplication.hpp */,
+				D4E79B721C10045800425A21 /* Subtraction.cpp */,
+				D4E79B731C10045800425A21 /* Subtraction.hpp */,
+			);
+			path = HWK6;
+			sourceTree = "<group>";
+		};
 		D4FE46201C083AE000440990 = {
 			isa = PBXGroup;
 			children = (
-				D4FE46271C083BA500440990 /* HWK6_ballesjm.cpp */,
-				D49DC4E01C0F978900BC6569 /* Expression.cpp */,
-				D49DC4E11C0F978900BC6569 /* Expression.hpp */,
-				D49DC4E21C0F97BF00BC6569 /* ArithmeticExpression.cpp */,
-				D49DC4E31C0F97BF00BC6569 /* ArithmeticExpression.hpp */,
-				D49DC4E41C0F97E600BC6569 /* Addition.cpp */,
-				D49DC4E51C0F97E600BC6569 /* Addition.hpp */,
-				D49DC4E61C0F97F900BC6569 /* Subtraction.cpp */,
-				D49DC4E71C0F97F900BC6569 /* Subtraction.hpp */,
-				D49DC4E81C0F980C00BC6569 /* Multiplication.cpp */,
-				D49DC4E91C0F980C00BC6569 /* Multiplication.hpp */,
-				D49DC4EA1C0F981D00BC6569 /* Division.cpp */,
-				D49DC4EB1C0F981D00BC6569 /* Division.hpp */,
+				D4E79B611C0FFDD000425A21 /* HWK6 */,
+				D4E79B601C0FFDD000425A21 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4E79B5E1C0FFDD000425A21 /* HWK6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E79B641C0FFDD000425A21 /* Build configuration list for PBXNativeTarget "HWK6" */;
+			buildPhases = (
+				D4E79B5B1C0FFDD000425A21 /* Sources */,
+				D4E79B5C1C0FFDD000425A21 /* Frameworks */,
+				D4E79B5D1C0FFDD000425A21 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HWK6;
+			productName = HWK6;
+			productReference = D4E79B5F1C0FFDD000425A21 /* HWK6 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D4FE46211C083AE000440990 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
+				TargetAttributes = {
+					D4E79B5E1C0FFDD000425A21 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
 			};
 			buildConfigurationList = D4FE46241C083AE000440990 /* Build configuration list for PBXProject "HWK6_ballesjm" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -58,14 +133,114 @@
 				en,
 			);
 			mainGroup = D4FE46201C083AE000440990;
+			productRefGroup = D4E79B601C0FFDD000425A21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D4E79B5E1C0FFDD000425A21 /* HWK6 */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		D4E79B5B1C0FFDD000425A21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E79B781C10045800425A21 /* HWK6_ballesjm.cpp in Sources */,
+				D4E79B751C10045800425A21 /* ArithmeticExpression.cpp in Sources */,
+				D4E79B761C10045800425A21 /* Division.cpp in Sources */,
+				D4E79B771C10045800425A21 /* Expression.cpp in Sources */,
+				D4E79B791C10045800425A21 /* Multiplication.cpp in Sources */,
+				D4E79B7A1C10045800425A21 /* Subtraction.cpp in Sources */,
+				D4E79B741C10045800425A21 /* Addition.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
 /* Begin XCBuildConfiguration section */
+		D4E79B651C0FFDD000425A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D4E79B661C0FFDD000425A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		D4FE46251C083AE000440990 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -81,6 +256,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D4E79B641C0FFDD000425A21 /* Build configuration list for PBXNativeTarget "HWK6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E79B651C0FFDD000425A21 /* Debug */,
+				D4E79B661C0FFDD000425A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D4FE46241C083AE000440990 /* Build configuration list for PBXProject "HWK6_ballesjm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
