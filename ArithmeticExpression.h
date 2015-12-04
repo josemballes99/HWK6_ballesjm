@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef ArithmeticExpression_hpp
-#define ArithmeticExpression_hpp
+#ifndef ArithmeticExpression_h
+#define ArithmeticExpression_h
 
 #include <stdio.h>
 #include <iostream>
@@ -33,4 +33,4 @@ using namespace std;
 //    }
 //};
 
-#endif /* ArithmeticExpression_hpp */
+#endif /* ArithmeticExpression_h */

@@ -14,12 +14,12 @@
 #include <iomanip>
 #include <string>
 
-#include "Expression.hpp"
-#include "Addition.hpp"
-#include "ArithmeticExpression.hpp"
-#include "Subtraction.hpp"
-#include "Multiplication.hpp"
-#include "Division.hpp"
+#include "Expression.h"
+#include "Addition.h"
+#include "ArithmeticExpression.h"
+#include "Subtraction.h"
+#include "Multiplication.h"
+#include "Division.h"
 
 using namespace std;
 

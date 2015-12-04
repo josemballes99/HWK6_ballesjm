@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef Expression_hpp
-#define Expression_hpp
+#ifndef Expression_h
+#define Expression_h
 
 #include <stdio.h>
 #include <iostream>
@@ -41,4 +41,4 @@ private:
     string newExpression;    
 };
 
-#endif /* Expression_hpp */
+#endif /* Expression_h */

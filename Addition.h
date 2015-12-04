@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef Addition_hpp
-#define Addition_hpp
+#ifndef Addition_h
+#define Addition_h
 
 #include <stdio.h>
 #include <iostream>
@@ -26,6 +26,6 @@ using namespace std;
 //    void print(){ ... } // (left `+` right)
 //};
 
-#endif /* Addition_hpp */
+#endif /* Addition_h */
 
 

@@ -1,13 +1,13 @@
 //
-//  Subtraction.hpp
+//  Division.hpp
 //  HWK6_ballesjm
 //
 //  Created by Jose Miguel Ballesteros on 2015-12-02.
 //
 //
 
-#ifndef Subtraction_hpp
-#define Subtraction_hpp
+#ifndef Division_h
+#define Division_h
 
 #include <stdio.h>
 #include <iostream>
@@ -19,10 +19,9 @@
 
 using namespace std;
 
-////Subtract two expression
-//class Subtraction: public ArithmeticExpression {
+//class Division: public ArithmeticExpression {
 //    string evaluate(){ ... }
-//    void print(){ ... } // (left `-` right)
-//};
+//    void print(){ ... } // (left `/` right)
+//}
 
-#endif /* Subtraction_hpp */
+#endif /* Division_h */

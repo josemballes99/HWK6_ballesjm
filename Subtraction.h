@@ -1,13 +1,13 @@
 //
-//  Multiplication.hpp
+//  Subtraction.hpp
 //  HWK6_ballesjm
 //
 //  Created by Jose Miguel Ballesteros on 2015-12-02.
 //
 //
 
-#ifndef Multiplication_hpp
-#define Multiplication_hpp
+#ifndef Subtraction_h
+#define Subtraction_h
 
 #include <stdio.h>
 #include <iostream>
@@ -19,11 +19,10 @@
 
 using namespace std;
 
-////Multiply two expression
-//class Multiplication: public ArithmeticExpression {
+////Subtract two expression
+//class Subtraction: public ArithmeticExpression {
 //    string evaluate(){ ... }
-//    void print(){ ... } // (left `*` right)
+//    void print(){ ... } // (left `-` right)
 //};
 
-
-#endif /* Multiplication_hpp */
+#endif /* Subtraction_h */

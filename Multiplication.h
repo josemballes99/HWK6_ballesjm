@@ -1,13 +1,13 @@
 //
-//  Division.hpp
+//  Multiplication.hpp
 //  HWK6_ballesjm
 //
 //  Created by Jose Miguel Ballesteros on 2015-12-02.
 //
 //
 
-#ifndef Division_hpp
-#define Division_hpp
+#ifndef Multiplication_h
+#define Multiplication_h
 
 #include <stdio.h>
 #include <iostream>
@@ -19,9 +19,11 @@
 
 using namespace std;
 
-//class Division: public ArithmeticExpression {
+////Multiply two expression
+//class Multiplication: public ArithmeticExpression {
 //    string evaluate(){ ... }
-//    void print(){ ... } // (left `/` right)
-//}
+//    void print(){ ... } // (left `*` right)
+//};
 
-#endif /* Division_hpp */
+
+#endif /* Multiplication_h */

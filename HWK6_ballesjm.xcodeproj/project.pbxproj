@@ -31,18 +31,18 @@
 /* Begin PBXFileReference section */
 		D4E79B5F1C0FFDD000425A21 /* HWK6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HWK6; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E79B671C10045800425A21 /* Addition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Addition.cpp; sourceTree = SOURCE_ROOT; };
-		D4E79B681C10045800425A21 /* Addition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Addition.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B681C10045800425A21 /* Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Addition.h; sourceTree = SOURCE_ROOT; };
 		D4E79B691C10045800425A21 /* ArithmeticExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArithmeticExpression.cpp; sourceTree = SOURCE_ROOT; };
-		D4E79B6A1C10045800425A21 /* ArithmeticExpression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArithmeticExpression.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6A1C10045800425A21 /* ArithmeticExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArithmeticExpression.h; sourceTree = SOURCE_ROOT; };
 		D4E79B6B1C10045800425A21 /* Division.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Division.cpp; sourceTree = SOURCE_ROOT; };
-		D4E79B6C1C10045800425A21 /* Division.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Division.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6C1C10045800425A21 /* Division.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Division.h; sourceTree = SOURCE_ROOT; };
 		D4E79B6D1C10045800425A21 /* Expression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Expression.cpp; sourceTree = SOURCE_ROOT; };
-		D4E79B6E1C10045800425A21 /* Expression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Expression.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B6E1C10045800425A21 /* Expression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = SOURCE_ROOT; };
 		D4E79B6F1C10045800425A21 /* HWK6_ballesjm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HWK6_ballesjm.cpp; sourceTree = SOURCE_ROOT; };
 		D4E79B701C10045800425A21 /* Multiplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Multiplication.cpp; sourceTree = SOURCE_ROOT; };
-		D4E79B711C10045800425A21 /* Multiplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Multiplication.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B711C10045800425A21 /* Multiplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multiplication.h; sourceTree = SOURCE_ROOT; };
 		D4E79B721C10045800425A21 /* Subtraction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Subtraction.cpp; sourceTree = SOURCE_ROOT; };
-		D4E79B731C10045800425A21 /* Subtraction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Subtraction.hpp; sourceTree = SOURCE_ROOT; };
+		D4E79B731C10045800425A21 /* Subtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subtraction.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +69,17 @@
 			children = (
 				D4E79B6F1C10045800425A21 /* HWK6_ballesjm.cpp */,
 				D4E79B671C10045800425A21 /* Addition.cpp */,
-				D4E79B681C10045800425A21 /* Addition.hpp */,
+				D4E79B681C10045800425A21 /* Addition.h */,
 				D4E79B691C10045800425A21 /* ArithmeticExpression.cpp */,
-				D4E79B6A1C10045800425A21 /* ArithmeticExpression.hpp */,
+				D4E79B6A1C10045800425A21 /* ArithmeticExpression.h */,
 				D4E79B6B1C10045800425A21 /* Division.cpp */,
-				D4E79B6C1C10045800425A21 /* Division.hpp */,
+				D4E79B6C1C10045800425A21 /* Division.h */,
 				D4E79B6D1C10045800425A21 /* Expression.cpp */,
-				D4E79B6E1C10045800425A21 /* Expression.hpp */,
+				D4E79B6E1C10045800425A21 /* Expression.h */,
 				D4E79B701C10045800425A21 /* Multiplication.cpp */,
-				D4E79B711C10045800425A21 /* Multiplication.hpp */,
+				D4E79B711C10045800425A21 /* Multiplication.h */,
 				D4E79B721C10045800425A21 /* Subtraction.cpp */,
-				D4E79B731C10045800425A21 /* Subtraction.hpp */,
+				D4E79B731C10045800425A21 /* Subtraction.h */,
 			);
 			path = HWK6;
 			sourceTree = "<group>";
