@@ -263,6 +263,7 @@
 				D4E79B661C0FFDD000425A21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4FE46241C083AE000440990 /* Build configuration list for PBXProject "HWK6_ballesjm" */ = {
 			isa = XCConfigurationList;

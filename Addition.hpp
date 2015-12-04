@@ -10,5 +10,22 @@
 #define Addition_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <math.h>
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+//Add two expressions
+
+//class Addition: public ArithmeticExpression {
+//    string evaluate(){ ... }
+//    void print(){ ... } // (left `+` right)
+//};
 
 #endif /* Addition_hpp */
+
+

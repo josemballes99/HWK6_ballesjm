@@ -6,28 +6,32 @@
 //
 //
 
+#include <stdio.h>
 #include <iostream>
 #include <math.h>
 #include <vector>
 #include <cmath>
 #include <iomanip>
-#include "Expression.cpp"
+#include <string>
+
+#include "Expression.hpp"
+#include "Addition.hpp"
+#include "ArithmeticExpression.hpp"
+#include "Subtraction.hpp"
+#include "Multiplication.hpp"
+#include "Division.hpp"
 
 using namespace std;
 
-string Expression:: evaluate(string input) {
-    
-    return "";
-};
-
 int main(){
-    Expression EXP;
     string input;
     
     cout << "Please Enter an expression: ";
     cin >> input;
     
-    EXP.evaluate(input);
+    Expression userInput(input);
+    
+    cout << "\n" << userInput.getExpression() << " = " << " ??? " << endl;
     
     return 0;
 }

@@ -6,11 +6,5 @@
 //
 //
 
-//#include "Addition.hpp"
-//
-////Add two expressions
-//
-//class Addition: public ArithmeticExpression {
-//    string evaluate(){ ... }
-//    void print(){ ... } // (left `+` right)
-//};
+#include "Addition.hpp"
+

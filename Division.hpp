@@ -10,5 +10,18 @@
 #define Division_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <math.h>
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+//class Division: public ArithmeticExpression {
+//    string evaluate(){ ... }
+//    void print(){ ... } // (left `/` right)
+//}
 
 #endif /* Division_hpp */

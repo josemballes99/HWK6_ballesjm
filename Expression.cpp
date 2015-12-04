@@ -8,9 +8,18 @@
 
 #include "Expression.hpp"
 
-class Expression {
-    public:
-        virtual string evaluate(string); // evaluate expression and return string representation of the result.
-        //virtual void print();
+Expression::Expression(string exp){
+    newExpression = exp;
+}
+Expression::~Expression(){
     
-};
+}
+
+string Expression::getExpression(){
+    return newExpression;
+}
+
+void Expression::setExpression(string exp){
+    newExpression = exp;
+}
+

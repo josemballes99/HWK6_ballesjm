@@ -10,5 +10,20 @@
 #define Multiplication_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <math.h>
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+////Multiply two expression
+//class Multiplication: public ArithmeticExpression {
+//    string evaluate(){ ... }
+//    void print(){ ... } // (left `*` right)
+//};
+
 
 #endif /* Multiplication_hpp */
