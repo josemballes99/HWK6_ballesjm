@@ -30,7 +30,7 @@ public:
     ~ArithmeticExpression();
     
     //Accessor Fuctions
-    string getExpression();
+    string getExpression() const;
     
     //Mutator Functions
     void setExpression(string);
@@ -38,13 +38,9 @@ public:
     Expression *left;
     Expression *right;
     
-//    string evaluate (){ //evaluate left expression and right expression
-//        void print();
-//    }
-//    
-//    float convert (string s){ // Converts a string (as would be returned by evaluate) to a float
-//        
-//    }
+    string evaluate (); //evaluate left expression and right expression
+    
+    float convert (string); // Converts a string (as would be returned by evaluate) to a float
 private:
     string newExpression;
 };

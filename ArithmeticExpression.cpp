@@ -15,10 +15,15 @@ ArithmeticExpression::~ArithmeticExpression(){
     
 }
 
-string ArithmeticExpression::getExpression(){
+string ArithmeticExpression::getExpression() const {
     return newExpression;
 }
 
 void ArithmeticExpression::setExpression(string exp){
     newExpression = exp;
+}
+
+string ArithmeticExpression::evaluate(){
+    void print();
+    return "";
 }
