@@ -20,25 +20,9 @@
 using namespace std;
 
 class Expression {
-public:
-    //constructor
-    Expression(string);
-    
-    //destructor
-    ~Expression();
-    
-    //Accessor Fuctions
-    string getExpression();
-    
-    //Mutator Functions
-    void setExpression(string);
-    
-    
-    //virtual string evaluate(); // evaluate expression and return string representation of the result.
-    //virtual void print();
-    
-private:
-    string newExpression;    
+//public:
+//    virtual string evaluate(); // evaluate expression and return string representation of the result.
+//    virtual void print();   
 };
 
 #endif /* Expression_h */

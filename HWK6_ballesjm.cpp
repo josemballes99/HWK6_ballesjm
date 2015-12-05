@@ -26,12 +26,17 @@ using namespace std;
 int main(){
     string input;
     
-    cout << "Please Enter an expression: ";
-    cin >> input;
+    while (1<2) {       //lol deadmau5
+        cout << "Please Enter an expression: ";
+        cin >> input;
+        
+        if ((input == "#")) {
+            break;
+        }
     
-    Expression userInput(input);
+        ArithmeticExpression userInput(input);
     
-    cout << "\n" << userInput.getExpression() << " = " << " ??? " << endl;
-    
+        cout << "\n" << userInput.getExpression() << " = " << " ??? " << endl;
+    }
     return 0;
 }

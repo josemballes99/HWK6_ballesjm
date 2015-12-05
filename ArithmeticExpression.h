@@ -17,13 +17,27 @@
 #include <iomanip>
 #include <string>
 
+#include "Expression.h"
 
 using namespace std;
 
-//class ArithmeticExpression : public Expression {
-//    Expression *left;
-//    Expression *right;
-//    
+class ArithmeticExpression : public Expression {
+public:
+    //Constructor
+    ArithmeticExpression(string);
+    
+    //destructor
+    ~ArithmeticExpression();
+    
+    //Accessor Fuctions
+    string getExpression();
+    
+    //Mutator Functions
+    void setExpression(string);
+    
+    Expression *left;
+    Expression *right;
+    
 //    string evaluate (){ //evaluate left expression and right expression
 //        void print();
 //    }
@@ -31,6 +45,8 @@ using namespace std;
 //    float convert (string s){ // Converts a string (as would be returned by evaluate) to a float
 //        
 //    }
-//};
+private:
+    string newExpression;
+};
 
 #endif /* ArithmeticExpression_h */
