@@ -8,18 +8,3 @@
 
 #include "Expression.h"
 
-Expression::Expression(string exp){
-    newExpression = exp;
-}
-Expression::~Expression(){
-    
-}
-
-string Expression::getExpression(){
-    return newExpression;
-}
-
-void Expression::setExpression(string exp){
-    newExpression = exp;
-}
-
