@@ -259,7 +259,8 @@ int main(){
     if (check==true){
 
        Expression xpres(input);            // sends the input to expression
-       cout << xpres.strg;
+       cout << xpres.newExpression;
+        
 
     }
 

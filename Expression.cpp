@@ -7,10 +7,10 @@
 //
 
 #include "Expression.h"
+Expression::Expression(string exp){
+                 newExpression = exp;
+}
 
-
-        Expression::Expression(string a){
-
-                 strg = a;
-
-        }
+Expression::~Expression(){
+    
+}

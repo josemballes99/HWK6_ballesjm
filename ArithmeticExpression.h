@@ -22,41 +22,15 @@
 using namespace std;
 
 
-//class ArithmeticExpression : public Expression {
+class ArithmeticExpression : public Expression {
+//public:
+//
 //    Expression *left;
 //    Expression *right;
 //
-//    string evaluate (){ //evaluate left expression and right expression
-//        void print();
-//    }
+//    string evaluate (); //evaluate left expression and right expression
 //
-//    float convert (string s){ // Converts a string (as would be returned by evaluate) to a float
-//
-//    }
-//};
-
-class ArithmeticExpression : public Expression {
-public:
-    //Constructor
-    ArithmeticExpression(string);
-
-    //destructor
-    ~ArithmeticExpression();
-
-    //Accessor Fuctions
-    string getExpression() const;
-
-    //Mutator Functions
-    void setExpression(string);
-
-    Expression *left;
-    Expression *right;
-
-    string evaluate (); //evaluate left expression and right expression
-
-    float convert (string); // Converts a string (as would be returned by evaluate) to a float
-private:
-    string newExpression;
+//    float convert (string); // Converts a string (as would be returned by evaluate) to a float
 };
 
 

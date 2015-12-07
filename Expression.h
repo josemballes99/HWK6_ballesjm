@@ -20,11 +20,13 @@
 using namespace std;
 
 class Expression {
-
 public:
-    string strg;
-    Expression(string a);
-
+    //Constructor
+    Expression(string);
+    
+    //destructor
+    ~Expression();
+    string newExpression;
 };
 
 #endif /* Expression_h */
