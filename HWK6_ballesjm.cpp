@@ -15,6 +15,7 @@
 #include <string>
 
 #include "Expression.h"
+#include "Expression.cpp"
 #include "Addition.h"
 #include "ArithmeticExpression.h"
 #include "Subtraction.h"
@@ -257,9 +258,8 @@ int main(){
 
     if (check==true){
 
-        Expression xpres(input);            // sends the input to expression
-       // ArithmeticExpression a(xpres);
-
+       Expression xpres(input);            // sends the input to expression
+       cout << xpres.strg;
 
     }
 

@@ -20,9 +20,11 @@
 using namespace std;
 
 class Expression {
-protected:
-//    virtual string evaluate(); // evaluate expression and return string representation of the result.
-//    virtual void print();   
+
+public:
+    string strg;
+    Expression(string a);
+
 };
 
 #endif /* Expression_h */

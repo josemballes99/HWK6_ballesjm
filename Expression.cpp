@@ -8,3 +8,9 @@
 
 #include "Expression.h"
 
+
+        Expression::Expression(string a){
+
+                 strg = a;
+
+        }
