@@ -15,7 +15,6 @@
 #include <string>
 
 #include "Expression.h"
-#include "Expression.cpp"
 #include "Addition.h"
 #include "ArithmeticExpression.h"
 #include "Subtraction.h"
@@ -261,7 +260,7 @@ int main(){
 
        Expression userInput(input);            // sends the input to expression
        cout << "\n" << userInput.getExpression() << " = " << " ??? " << endl;
-        
+
 
     }
     return 0;

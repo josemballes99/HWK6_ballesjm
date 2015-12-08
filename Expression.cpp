@@ -8,7 +8,6 @@
 
 #include "Expression.h"
 
-
 Expression::Expression(string exp){
             newExpression = exp;
 }

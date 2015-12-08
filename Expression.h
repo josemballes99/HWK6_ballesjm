@@ -16,20 +16,19 @@
 #include <cmath>
 #include <iomanip>
 #include <string>
-
 using namespace std;
 
 class Expression {
 public:
     //Constructor
     Expression(string);
-    
+
     //destructor
     ~Expression();
-    
+
     //Accessor
     string getExpression();
-    
+
 protected:
     string newExpression;
 };
