@@ -26,6 +26,11 @@ public:
     
     //destructor
     ~Expression();
+    
+    //Accessor
+    string getExpression();
+    
+protected:
     string newExpression;
 };
 

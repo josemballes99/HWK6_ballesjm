@@ -66,7 +66,7 @@ int main(){
             check=false;                                        //presets check to false
 
             for (int i=0; i<input.length(); i++){               //goes through all the values
-                cout << "loop"<<endl;
+                cout << "loop" << endl;
                 if(int(input[i])!=32&&whiteindex==0){           //if a value is found that is not empty and the whiteindex is 0
                     int c=i;
                     if (input[i]==')'){
@@ -85,7 +85,8 @@ int main(){
 
                 if(int(input[i])!=32&&whiteindex!=0){           //if the white index is not zero and the next number is not empty
                     cout << "its in" << endl;
-                    if ((int(l)>=48 && int(l)<=57)&&((input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/')||(input[i]==')'))){      //then check if the last character before a white space was a number and the new character is an operand
+                    int l;
+                    if (((l >= 48) && (l <= 57)) && ((input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/')||(input[i]==')'))){      //then check if the last character before a white space was a number and the new character is an operand
                         int j=i;
                         cout << l << endl;
                         if (input[i]==')'){
@@ -168,7 +169,7 @@ int main(){
         bool signcheck=false;
         bool numcheck=false;
         for (int i=0; i<input.length(); i++){
-            if (input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='+/'){
+            if (input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i] == '/'){
                 signcheck=true;
                 for(int j=i; j<input.length();j++){
 
@@ -251,25 +252,17 @@ int main(){
     }
 
 
-    cout <<input<<endl;
+    cout << input << endl;
     cout << check;
 
 
 
     if (check==true){
 
-       Expression xpres(input);            // sends the input to expression
-       cout << xpres.newExpression;
+       Expression userInput(input);            // sends the input to expression
+       cout << "\n" << userInput.getExpression() << " = " << " ??? " << endl;
         
 
     }
-
-
-
-
-    //Expression userInput(input);
-
-    //cout << "\n" << userInput.getExpression() << " = " << " ??? " << endl;
-
     return 0;
 }
