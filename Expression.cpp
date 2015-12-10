@@ -16,6 +16,3 @@ Expression::~Expression(){
 
 }
 
-string Expression::getExpression(){
-    return newExpression;
-}

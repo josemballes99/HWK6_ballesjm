@@ -29,7 +29,6 @@ public:
     //Accessor
     string getExpression();
 
-protected:
     string newExpression;
 };
 

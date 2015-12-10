@@ -259,7 +259,7 @@ int main(){
     if (check==true){
 
        Expression userInput(input);            // sends the input to expression
-       cout << "\n" << userInput.getExpression() << " = " << " ??? " << endl;
+       cout << "\n" << userInput.newExpression<< " = " << " ??? " << endl;
 
 
     }
