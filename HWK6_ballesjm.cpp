@@ -251,8 +251,8 @@ int main(){
     }
 
 
-    cout << input << endl;
-    cout << check;
+    //cout << input << endl;
+    //cout << check;
 
 
 

@@ -21,10 +21,10 @@ using namespace std;
 class Expression {
 public:
     //Constructor
-    Expression(string);
+    Expression(string){};
 
     //destructor
-    ~Expression();
+    ~Expression(){};
 
     //Accessor
     string getExpression();
