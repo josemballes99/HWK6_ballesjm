@@ -8,10 +8,18 @@
 
 #include "Expression.h"
 
+//Default Constructor
+Expression::Expression(){
+    
+}
+
+//Overload Constructor
 Expression::Expression(string exp){
             newExpression = exp;
 }
 
+
+//Destructor
 Expression::~Expression(){
 
 }

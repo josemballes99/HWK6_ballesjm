@@ -23,6 +23,82 @@
 
 using namespace std;
 
+string insertBrackets(string input)
+{
+    
+    /*
+     CASE ONE --> '*' or '/' followed by a bracket
+     */
+    
+    for(size_t i = 0; i < input.length(); i++) { //  loop through the string
+        if((input.at(i) == '*') || (input.at(i) == '/')) {
+            if(input.at(i+1) == '(') {  // finds the first open bracket if it is right beside it
+                
+                size_t j = i; // initalize j and k to have the same value in the string as i
+                size_t k = i;
+                
+                while(input.at(j) != ')') { // looks for the closed brackets
+                    j++;    //increases j by one
+                }
+                if(input.at(j) == ')') {    // inserts the closed bracket after the closed bracket
+                    input.insert(j+1, 1, ')');
+                }
+                
+                
+                do {
+                    k--;
+                } while ((input.at(k) != '+') && (input.at(k) != '-') && (input.at(k) != '*') && (input.at(k) != '/') && (k != 0)); //this do while loop decrements the k value until it reaches the operator
+                
+                
+                if (((input.at(k) == '+') || (input.at(k) == '-')|| (input.at(k) == '*') || (input.at(k) == '/')) && (input.at(k-1) != '(')) { //covers a case where it inserts the open bracket where there is a negative
+                    input.insert(k+1,1,'(');
+                    i++;
+                }
+                else if ((((input.at(k) == '+') || (input.at(k) == '-')|| (input.at(k) == '*') || (input.at(k) == '/')) && (input.at(k-1) == '('))) {   //covers case where there might be a bracket in the beginning
+                    input.insert(k,1,'(');
+                    i++;
+                }
+                else {
+                    input.insert(0,1,'(');  //covers the case where a open bracket is needed in the beginning
+                    i++;
+                }
+            }
+        }
+    }
+    
+    /*
+     CASE TWO --> seperating additions and subtractions
+     */
+    
+    
+    for (int i = 0; i < input.length(); i++){
+        if (((input.at(i) == '+') || (input.at(i) == '-')) && (input.at(i-1) != '(')) {
+            input.insert(i+1,1,'(');
+            input.insert(i,1,')');
+            i++;
+        }
+    }
+    
+    input.insert(0,1,'(');
+    input.insert(input.length(),1,')');
+    
+    for (int i = 0; i < input.length(); i++) {
+        if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i-1) == ')')) {
+            input.insert(i+1,1,'(');
+            input.insert(i,1,')');
+            i++;
+        }
+        else if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i+1) == '(')) {
+            input.insert(i+1,1,'(');
+            input.insert(i,1,')');
+            i++;
+        }
+    }
+    
+
+    return input;
+}
+
 int main(){
     string input;
     bool check =true;
@@ -251,15 +327,20 @@ int main(){
     }
 
 
-    //cout << input << endl;
-    //cout << check;
+    
 
 
 
     if (check==true){
+        
+       input = insertBrackets(input);
 
        Expression userInput(input);            // sends the input to expression
-       cout << "\n" << userInput.newExpression<< " = " << " ??? " << endl;
+        
+        
+       //cout << "\n" << userInput.newExpression << endl;
+        ArithmeticExpression bracketinput(userInput);
+       
 
 
     }

@@ -20,13 +20,22 @@ using namespace std;
 
 class Expression {
 public:
-    //Constructor
+    //Default Constructor
+    Expression();
+    
+    //Overload Constructor
     Expression(string);
 
     //destructor
     ~Expression();
 
     string newExpression;
+    
+    //Functions
+    string insertBrackets();
+    
+    virtual string evaluate(); // evaluate expression and return string representation of the result.
+    
 };
 
 #endif /* Expression_h */
