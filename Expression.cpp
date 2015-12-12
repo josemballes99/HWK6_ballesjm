@@ -9,18 +9,14 @@
 #include "Expression.h"
 
 //Default Constructor
-Expression::Expression(){
-    
-}
+Expression::Expression(){}
 
 //Overload Constructor
 Expression::Expression(string exp){
-            newExpression = exp;
+    newExpression = exp;
 }
 
 
 //Destructor
-Expression::~Expression(){
-
-}
+Expression::~Expression(){}
 

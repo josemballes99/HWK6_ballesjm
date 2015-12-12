@@ -12,10 +12,12 @@
 #include <stdio.h>
 #include <iostream>
 #include <math.h>
-#include <vector>
 #include <cmath>
 #include <iomanip>
 #include <string>
+#include <algorithm>
+#include <iterator>
+#include <cctype>
 
 using namespace std;
 

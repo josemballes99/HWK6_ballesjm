@@ -13,6 +13,9 @@
 #include <cmath>
 #include <iomanip>
 #include <string>
+#include <algorithm>
+#include <iterator>
+#include <cctype>
 
 #include "Expression.h"
 #include "Addition.h"
@@ -333,16 +336,19 @@ int main(){
 
     if (check==true){
         
-       input = insertBrackets(input);
+        input = insertBrackets(input);
 
-       Expression userInput(input);            // sends the input to expression
+        ArithmeticExpression userInput(input);            // sends the input to Arithmetic expression
         
         
-       //cout << "\n" << userInput.newExpression << endl;
-        ArithmeticExpression bracketinput(userInput);
-       
-
-
+        cout << "\n" << userInput.newExpression << endl;
+        
+        //userInput.stringtoExpression(input);
+        
+        //cout << "\n" << userInput.newExpression << endl;
+        
+        
+        //ArithmeticExpression bracketinput(userInput);
     }
     return 0;
 }
