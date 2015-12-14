@@ -1,10 +1,9 @@
-//
-//  ArithmeticExpression.cpp
-//  HWK6_ballesjm
-//
-//  Created by Jose Miguel Ballesteros on 2015-12-02.
-//
-//
+/*
+ Name: Sarthak Desai, Jose Miguel Ballesteros, Rehan Theiveehathasan
+ MacID: desaisa3, ballesjm, theivers
+ Student Number: 1423055, 1411748, 1416031
+ Description: [This is file breaks the appart the sting by recursivly sending the objects on the left and right side to their respective calculations]
+ */
 
 #include "ArithmeticExpression.h"
 
@@ -27,7 +26,7 @@ ArithmeticExpression::~ArithmeticExpression(){}
 //        }                                                         //end of for
 //          
 //        string rightside = "";                                    //creates a string right side to store the characters on the right of the sign
-          int c=0;                                                      //counter for the characters
+          //int c=0;                                                      //counter for the characters
 //        for(int i=checkindexPM+1;i<newExpression.length();i++){           //loops through all the characters after the sign
 //                                                         
 //            rightside.insert(c,1,newExpression.at(i));                    //adds to the rightside string the values extracted from the right of the input
@@ -44,127 +43,93 @@ ArithmeticExpression::~ArithmeticExpression(){}
 //        string a=left->evaluate();                                        //calls evaluate recursively using the pointer
 //        string b=right->evaluate();                                       //calls evaluate recursively using the pointer
 //        
-//        if (newExpression[checkindexPM] == '+') {
-//            Addition addstr(a,b);
+//        if (newExpression[checkindexPM] == '+') {                 //if index is and addition
+//            Addition addstr(a,b);                                 //Create addition object
 //            
-//            Addition newls(a);
-//            Addition newrs(b);
+//            Addition newls(a);                            // create leftside pointer object in Addition
+//            Addition newrs(b);                            // create rightside pointer object in Addition
 //            
-//            ArithmeticExpression *newleftside = &newls;
-//            ArithmeticExpression *newrightside= &newrs;
+//            ArithmeticExpression *newleftside = &newls;   // create leftside pointer object in ArithmeticExpression
+//            ArithmeticExpression *newrightside= &newrs;   // create rightside pointer object in ArithmeticExpression
 //            
-//            string newa = newleftside->evaluate();
-//            string newb = newrightside->evaluate();
+//            string newa = newleftside->evaluate();        //evaluate leftside
+//            string newb = newrightside->evaluate();       //evaluate rightside
 //            for(int i=0; i<newa.length();i++){
-//                if(newa[i]=='+'|| newa[i]=='-'){
-//                    
-//                }
-//                else if (<#condition#>){
-//                    
-//                }
-//                else {
-//                    
-//                }
+//
 //            }
 //            
 //        }
-//        else if (newExpression[checkindexPM] == '-'){
+//        else if (newExpression[checkindexPM] == '-'){ //if index is and subtraction
 //            
-//            //Subtraction addstr(a,b);
+//            //Subtraction addstr(a,b);    //Create subtraction object
 //            
-//            //Subtraction newls(a);
-//            //Subtraction newrs(b);
+//            //Subtraction newls(a);        // create leftside pointer object in Subtraction
+//            //Subtraction newrs(b);          // create rightside pointer object in Subtraction
 //            
-//            //ArithmeticExpression *newleftside = &newls;
-//            //ArithmeticExpression *newrightside= &newrs;
+//            //ArithmeticExpression *newleftside = &newls; // create leftside pointer object in ArithmeticExpression
+//            //ArithmeticExpression *newrightside= &newrs; // create rightside pointer object in ArithmeticExpression
 //            
-//            string newa = newleftside->evaluate();
-//            string newb = newrightside->evaluate();
+//            string newa = newleftside->evaluate();    //evaluate leftside
+//            string newb = newrightside->evaluate();   //evaluate rightside
 //                        for(int i=0; i<newa.length();i++){
-//                            if(newa[i]=='+'|| newa[i]=='-'){
-//            
-//                            }
-//                            else if (<#condition#>){
-//            
-//                            }
-//                            else {
-//                                
-//                            }
+//
 //                        }
 //        }
 //        
 //    }
-//    int checkindexMD=addsub(newExpression);
-//    if (checkindexMD!=-1){
+//    int checkindexMD=addsub(newExpression);   //run function to look for the index where addition or subtraction occurs
+//    if (checkindexMD!=-1){        // the above method returns -1 if no * or / was found
 //        
-//        string leftside = "";
-//        for (int i = 0; i<checkindexMD; i++) {
-//            leftside.insert(i,1,newExpression.at(i));
+//        string leftside = "";     //sets leftside string to empty
+//        for (int i = 0; i<checkindexMD; i++) {    //loop to extract all the characters before the sign was encountered
+//            leftside.insert(i,1,newExpression.at(i)); // edits the leftside string to contain the characters extracted
 //        }
 //        
-//        string rightside = "";
+//        string rightside = "";                                    //creates a string right side to store the characters on the right of the sign
+//        int c=0;          //counter for the characters
 //        for(int i=checkindexMD+1;i<newExpression.length();i++){
-//            int c=0;
-//            rightside.insert(c,1,newExpression.at(i));
+//
+//            rightside.insert(c,1,newExpression.at(i));            //loops through all the characters after the sign
 //            c++;
 //        }
 //        
 //        
-//        ArithmeticExpression ls(leftside);
-//        ArithmeticExpression rs(rightside);
+//        ArithmeticExpression ls(leftside);                //creates an object of type arithmetic expression with the rightside
+//        ArithmeticExpression rs(rightside);               //creates an object of type arithmetic expression with the leftside
 //        
-//        Expression *left = &ls;
-//        Expression *right = &rs;
+//        Expression *left = &ls;                       //sets *left pointer to the reference of ls
+//        Expression *right = &rs;                      //sets *right to the reference of rs
 //        
-//        string a=left->evaluate();
-//        string b=right->evaluate();
+//        string a=left->evaluate();                 //calls evaluate recursively using the pointer
+//        string b=right->evaluate();                   //calls evaluate recursively using the pointer
 //        
-//        if (newExpression[checkindexMD] == '*') {
-//            Multiplication addstr(a,b);
+//        if (newExpression[checkindexMD] == '*') {      //if index is and multiplication
+//            Multiplication addstr(a,b);                  //Create addition object
 //            
-//            Multiplication newls(a);
-//            Multiplication newrs(b);
+//            Multiplication newls(a);                  // create leftside pointer object in Multiplication
+//            Multiplication newrs(b);                  // create rightside pointer object in Multiplication
 //            
-//            ArithmeticExpression *newleftside = &newls;
-//            ArithmeticExpression *newrightside= &newrs;
+//            ArithmeticExpression *newleftside = &newls;       // create leftside pointer object in ArithmeticExpression
+//            ArithmeticExpression *newrightside= &newrs;       // create rightside pointer object in ArithmeticExpression
 //            
-//            string newa = newleftside->evaluate();
-//            string newb = newrightside->evaluate();
-//                        for(int i=0; i<newa.length();i++){
-//                            if(newa[i]=='+'|| newa[i]=='-'){
-//            
-//                            }
-//                            else if (<#condition#>){
-//            
-//                            }
-//                            else {
-//                            }
-//                        }
+//            string newa = newleftside->evaluate();            //evaluate leftside
+//            string newb = newrightside->evaluate();           //evaluate rightside
+//
 //            
 //        }
-//        else if (newExpression[checkindexMD] == '/'){
+//        else if (newExpression[checkindexMD] == '/'){         //if index is and division
 //            
-//            Division addstr(a,b);
+//            Division addstr(a,b);                         //Create addition object
 //            
-//            Division newls(a);
-//            Division newrs(b);
+//            Division newls(a);                        // create leftside pointer object in Division
+//            Division newrs(b);                        // create rightside pointer object in Division
 //            
-//            ArithmeticExpression *newleftside = &newls;
-//            ArithmeticExpression *newrightside= &newrs;
+//            ArithmeticExpression *newleftside = &newls;       // create leftside pointer object in ArithmeticExpression
+//            ArithmeticExpression *newrightside= &newrs;       // create rightside pointer object in ArithmeticExpression
 //            
-//            string newa = newleftside->evaluate();
-//            string newb = newrightside->evaluate();
-//                        for(int i=0; i<newa.length();i++){
-//                            if(newa[i]=='+'|| newa[i]=='-'){
-//            
-//                            }
-//                            else if (<#condition#>){
-//            
-//                            }
-//                            else {
-//                                
-//                            }
-//                        }
+//            string newa = newleftside->evaluate();        //evaluate leftside
+//            string newb = newrightside->evaluate();       //evaluate rightside
+//
 //        }
 //        
 //    }
@@ -172,36 +137,36 @@ ArithmeticExpression::~ArithmeticExpression(){}
 //}
 //
 //
-//int addsub(string input){
-//    int braccount=0;
-//    for (int i=0;i < input.length(); i++){
-//        if (input[i]=='('){
-//            braccount++;
+//int addsub(string input){     //this function returns the index where addition or subtraction occurs
+//    int braccount=0;          //initialize braccount
+//    for (int i=0;i < input.length(); i++){    //for the length of the string
+//        if (input[i]=='('){           //if input is a open bracket
+//            braccount++;          //incremant braccount
 //        }
-//        else if(input[i]==')'){
-//            braccount--;
+//        else if(input[i]==')'){       //if input is a closed bracket
+//            braccount--;          //decrement braccount
 //        }
 //        
-//        else if (((input[i]=='+') || (input[i]=='-'))&&(braccount==0)){
-//            return i;
+//        else if (((input[i]=='+') || (input[i]=='-'))&&(braccount==0)){       //if input is an addition or subtraction and braccount is 0
+//            return i;         //return the index
 //        }
 //    }
-//    return -1;
+//    return -1;        //if nothing is found return -1
 //}
 //
-//int muldiv(string input){
-//    int braccount=0;
-//    for (int i=0;i < input.length(); i++){
-//        if (input[i]=='('){
-//            braccount++;
+//int muldiv(string input){     //this function returns the index where multiplication or division occurs
+//    int braccount=0;  //initialize braccount
+//    for (int i=0;i < input.length(); i++){        //for the length of the string
+//        if (input[i]=='('){       //if input is a open bracket
+//            braccount++;          //incremant braccount
 //        }
-//        else if(input[i]==')'){
-//            braccount--;
+//        else if(input[i]==')'){       //if input is a closed bracket
+//            braccount--;              //decrement braccount
 //        }
 //        
-//        else if (((input[i]=='*') || (input[i]=='/'))&&(braccount==0)){
-//            return i;
+//        else if (((input[i]=='*') || (input[i]=='/'))&&(braccount==0)){       //if input is an addition or subtraction and braccount is 0
+//            return i;             //return the index
 //        }
 //    }
-//    return -1;
+//    return -1;        //if nothing is found return -1
 //}

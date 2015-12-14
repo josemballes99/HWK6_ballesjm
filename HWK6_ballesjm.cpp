@@ -1,10 +1,9 @@
-//
-//  HWK6_ballesjm.cpp
-//  HWK6_ballesjm
-//
-//  Created by Jose Miguel Ballesteros on 2015-11-27.
-//
-//
+/*
+ Name: Sarthak Desai, Jose Miguel Ballesteros, Rehan Theiveehathasan
+ MacID: desaisa3, ballesjm, theivers
+ Student Number: 1423055, 1411748, 1416031
+ Description: [This file contains the foundations of the BEDMASS program by performing sanity checks and breaking down the string by adding brackets]
+*/
 
 #include <stdio.h>
 #include <iostream>
@@ -26,7 +25,7 @@
 
 using namespace std;
 
-string insertBrackets(string input)
+string insertBrackets(string input) //This function adds brackets to conserve BEDMASS
 {
 
     /*
@@ -74,55 +73,59 @@ string insertBrackets(string input)
      */
 
 
-    for (int i = 0; i < input.length(); i++){
-        if (((input.at(i) == '+') || (input.at(i) == '-')) && (input.at(i-1) != '(')) {
-            input.insert(i+1,1,'(');
-            input.insert(i,1,')');
+    for (int i = 0; i < input.length(); i++){   // loop through the string one more time
+        if (((input.at(i) == '+') || (input.at(i) == '-')) && (input.at(i-1) != '(')) { // check for + and - where negatives are not present
+            input.insert(i+1,1,'(');    //insert open bracket infront
+            input.insert(i,1,')');      //insert closed bracket behind
             i++;
         }
     }
 
-    input.insert(0,1,'(');
-    input.insert(input.length(),1,')');
+    input.insert(0,1,'(');  //insert the open bracket at the beginning
+    input.insert(input.length(),1,')'); //insert the closed bracket at the end
 
-    for (int i = 0; i < input.length(); i++) {
-        if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i-1) == ')')) {
-            input.insert(i+1,1,'(');
-            input.insert(i,1,')');
+    for (int i = 0; i < input.length(); i++) {  //loop through the string once again
+        if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i-1) == ')')) { //look for multiplication or division signs where a  closed bracket is not present behind it
+            input.insert(i+1,1,'(');    //insert open bracket infront
+            input.insert(i,1,')');      //insert clode bracket behind
             i++;
         }
-        else if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i+1) == '(')) {
-            input.insert(i+1,1,'(');
-            input.insert(i,1,')');
+        else if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i+1) == '(')) {  //same as the upper one but with a open bracket infront of it
+            input.insert(i+1,1,'(');        //insert open bracket infront
+            input.insert(i,1,')');          //insert closed bracket behind
             i++;
         }
     }
 
-    return input;
+    return input;       //return the string with the brackets inputted
 }
 
-string stripSpace(string express)
+string stripSpace(string express)   //this function will get rid of all the spaced in the inputted string
 {
-    for(size_t i = 0; i < express.length(); i++)
+    for(size_t i = 0; i < express.length(); i++)   //for length of the string
     {
-        if(express.at(i) == ' ')
+        if(express.at(i) == ' ')        //if a space is found
         {
-            express.erase(i,1);
+            express.erase(i,1);         // remove space
             i--;
         }
     }
-    return express;
+    return express;     //return expression without any spaces
 }
 
 
 
 int main(){                     // start of main
+    while (1<2) {               //infintily run the program
     string input;               //var to hold the input from the user
     bool check =true;           //boolean to check if the input is valid
     int openbrack=0;            //var to count the number of open brackets
     int closebrack=0;           //var to count the number of closed brackets
     cout << "Please Enter an expression: ";         // prompt to user
     getline(cin,input);                             //gets the user input and stres in the var input
+    if (input == "#") {
+        break;      //break once hash is reached
+    }
 
 
     // checks if all the characters are valid characters including spaces
@@ -348,17 +351,11 @@ int main(){                     // start of main
         ArithmeticExpression userInput(input);            // creates object of type arithmetic expression by sending in the input string
 
 
-        cout << "\n" << userInput.newExpression << endl;            // outputs the string entered by the user
+        cout << "\n" << userInput.newExpression << " = " << "???" << endl;            // outputs the string entered by the user
 
-<<<<<<< HEAD
-        userInput.stringtoExpression(input);
-
-        //cout << "\n" << userInput.newExpression << endl;
-
-=======
->>>>>>> origin/master
 
        
-    }                                       //end of if
+    }//end of if
+    }
     return 0;                               //return 
 }                                           //end of main

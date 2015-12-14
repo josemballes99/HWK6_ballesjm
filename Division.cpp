@@ -1,10 +1,9 @@
-//
-//  Division.cpp
-//  HWK6_ballesjm
-//
-//  Created by Jose Miguel Ballesteros on 2015-12-02.
-//
-//
+/*
+ Name: Sarthak Desai, Jose Miguel Ballesteros, Rehan Theiveehathasan
+ MacID: desaisa3, ballesjm, theivers
+ Student Number: 1423055, 1411748, 1416031
+ Description: [This is file performs division]
+ */
 
 #include "Division.h"
 
