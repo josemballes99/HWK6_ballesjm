@@ -29,13 +29,15 @@ public:
 
     
     //Default Constructor
-    Expression();
+    Expression(){}
     
     //Overload Constructor
-    Expression(string exp);
+    Expression(string exp){
+    newExpression = exp;
+    }
 
     //destructor
-    ~Expression();
+    ~Expression(){}
     
     //Functions
     string insertBrackets();

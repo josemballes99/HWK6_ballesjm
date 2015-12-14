@@ -26,9 +26,11 @@ using namespace std;
 
 class ArithmeticExpression : public Expression {
 public:
-    ArithmeticExpression(Expression input);
+    ArithmeticExpression(Expression input){
+    this->newExpression = input.newExpression;   
+	}
     
-    ~ArithmeticExpression();
+    ~ArithmeticExpression(){}
     
     Expression *left;
     Expression *right;

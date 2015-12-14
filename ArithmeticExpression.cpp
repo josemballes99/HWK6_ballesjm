@@ -2,17 +2,14 @@
  Name: Sarthak Desai, Jose Miguel Ballesteros, Rehan Theiveehathasan
  MacID: desaisa3, ballesjm, theivers
  Student Number: 1423055, 1411748, 1416031
- Description: [This is file breaks the appart the sting by recursivly sending the objects on the left and right side to their respective calculations]
+ Description: [This is file breaks the appart the string by recursively sending the objects on the left and right side to their respective calculations]
  */
 
 #include "ArithmeticExpression.h"
 
-ArithmeticExpression::ArithmeticExpression(Expression input){
-    this->newExpression = input.newExpression;
-    
-}
+//ArithmeticExpression::ArithmeticExpression(Expression input)
 
-ArithmeticExpression::~ArithmeticExpression(){}
+//ArithmeticExpression::~ArithmeticExpression(){}
 
 
 //string ArithmeticExpression::evaluate(){                          //evaluate method of arithmetic expression
