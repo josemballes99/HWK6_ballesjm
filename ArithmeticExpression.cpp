@@ -16,32 +16,33 @@ ArithmeticExpression::ArithmeticExpression(Expression input){
 ArithmeticExpression::~ArithmeticExpression(){}
 
 
-//string ArithmeticExpression::evaluate(){
+//string ArithmeticExpression::evaluate(){                          //evaluate method of arithmetic expression
 //    
-//    int checkindexPM=addsub(newExpression);
-//    if (checkindexPM!=-1){
-//        
-//        string leftside = "";
-//        for (int i = 0; i<checkindexPM; i++) {
-//            leftside.insert(i,1,newExpression.at(i));
-//        }
-//        
-//        string rightside = "";
-//        for(int i=checkindexPM+1;i<newExpression.length();i++){
-//            int c=0;
-//            rightside.insert(c,1,newExpression.at(i));
-//            c++;
-//        }
+//    int checkindexPM=addsub(newExpression);                       // calls the method addsub to find a + or minus sign
+//    if (checkindexPM!=-1){                                        // the above method returns -1 if no + or - was found
+//          
+//        string leftside = "";                                     //sets leftside string to empty
+//        for (int i = 0; i<checkindexPM; i++) {                    //loop to extract all the characters before the sign was encountered
+//            leftside.insert(i,1,newExpression.at(i));             // edits the leftside string to contain the characters extracted
+//        }                                                         //end of for
+//          
+//        string rightside = "";                                    //creates a string right side to store the characters on the right of the sign
+          int c=0;                                                      //counter for the characters
+//        for(int i=checkindexPM+1;i<newExpression.length();i++){           //loops through all the characters after the sign
+//                                                         
+//            rightside.insert(c,1,newExpression.at(i));                    //adds to the rightside string the values extracted from the right of the input
+//            c++;                                                          //increases the counter
+//        }                                                                 //end of for
 //      
 //        
-//        ArithmeticExpression ls(leftside);
-//        ArithmeticExpression rs(rightside);
+//        ArithmeticExpression ls(leftside);                                //creates an object of type arithmetic expression with the rightside
+//        ArithmeticExpression rs(rightside);                               //creates an object of type arithmetic expression with the leftside
 //        
-//        Expression *left = &ls;
-//        Expression *right = &rs;
+//        Expression *left = &ls;                                           //sets *left pointer to the reference of ls
+//        Expression *right = &rs;                                          //sets *right to the reference of rs
 //        
-//        string a=left->evaluate();
-//        string b=right->evaluate();
+//        string a=left->evaluate();                                        //calls evaluate recursively using the pointer
+//        string b=right->evaluate();                                       //calls evaluate recursively using the pointer
 //        
 //        if (newExpression[checkindexPM] == '+') {
 //            Addition addstr(a,b);

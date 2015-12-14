@@ -166,195 +166,189 @@ int main(){                     // start of main
                         }                                       //end of while
                     }                                           //end of if
                     l=input[c];                                 // then this becomes the left side character
-                    cout << "leftside"<<endl;
-                }
+                }                                               // end of if
 
                 if (int(input[i])==32){                         //when a white space is encountered the whiteindex is made a non zero value
-                    whiteindex=i;
-                    cout << "whitespace" << endl;
-                }
+                    whiteindex=i;                               //white index value is set
+                }                                               //end of if
 
                 if(int(input[i])!=32&&whiteindex!=0){           //if the white index is not zero and the next number is not empty
-                    cout << "its in" << endl;
-                    int l;
                     if (((l >= 48) && (l <= 57)) && ((input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/')||(input[i]==')'))){      //then check if the last character before a white space was a number and the new character is an operand
-                        int j=i;
-                        cout << l << endl;
-                        if (input[i]==')'){
-                            while(input[j]!='+'||input[j]!='-'||input[j]!='*'||input[j]!='/'){
-                                j=j+1;
-                            }
-                        }
-                        check=true;                                                                                     // this is valid so check=true now
-                        whiteindex=0;                                                                               //reset whitespace
-                        l=input[j];
-                    }
-                    else if((l=='+'||l=='-'||l=='*'||l=='/')&&((int(input[i])>=48&&int(input[i])<=57)||(input[i]=='('))){         // or the other way around
-                        int j=i;
-                        if (input[i]=='('){
-                                while (int(input[j])<48||int(input[j])>57){
-                                    j=j+1;
-                                }
-                        }
+                        int j=i;                        //sets j to i
+                        if (input[i]==')'){             // checks if closed bracket is encountered
+                            while(input[j]!='+'||input[j]!='-'||input[j]!='*'||input[j]!='/'){  //runs while loop while characters represent a number
+                                j=j+1;                  //increases the j count by 1, as long as a number is encountered
+                            }                           //end of while
+                        }                               //end of if
+                        check=true;                                                                 // this is valid so check=true now
+                        whiteindex=0;                                                             //reset whitespace index to 0
+                        l=input[j];                                                             //sets l character to the value at j in the input string
+                    }                                                                           //end of if
+                    else if((l=='+'||l=='-'||l=='*'||l=='/')&&((int(input[i])>=48&&int(input[i])<=57)||(input[i]=='('))){   // or the other way around
+                        int j=i;                            //sets the value of j to to i so i does not change
+                        if (input[i]=='('){                 //checks if the value is a open index
+                                while (int(input[j])<48||int(input[j])>57){         //while loop checks if the character is not a number
+                                    j=j+1;                                          //increases j counter
+                                }                                   // end of while
+                        }                                           //end of if
 
-                        check=true;                                                                         //check is true now
-                        whiteindex=0;
-                        l=input[j];                                                                               //reset whitespace
-                    }
+                        check=true;                              //check is true now
+                        whiteindex=0;                           //reset whitespace
+                        l=input[j];                             //resets the l character to the one at the jth index in the input
+                    }                                           //end of if
 
-                    else{
-                        check=false;
-                        break;
-                    }
-                }
-            }
-        }
-    }
+                    else{                                       //if neither of the above are satisfied
+                        check=false;                            //sets check to false
+                        break;                                  //breaks the check loop as no more checks are required
+                    }                                           // end of if
+                }                                               //end of if
+            }                                                   //end of for
+        }                                                       //end of if
+    }                                                           //end of if
 
 
 
     //checks if the number of brackets are correct
-    if (check==true){
+    if (check==true){                                           //only starts if the other checks have passed
 
-        for (int i=0; i<input.length();i++){
+        for (int i=0; i<input.length();i++){                    //loops through all characters in input
 
-            if (input[i]=='('){
-                    openbrack=openbrack+1;
-                }
-            else if (input [i]==')'){
+            if (input[i]=='('){                                 //checks if an open bracket is found
+                    openbrack=openbrack+1;                      //increases open bracket counter
+                }                                               //end of if
+            else if (input [i]==')'){                           //checks if closed bracket is found
 
-                closebrack=closebrack+1;
-            }
+                closebrack=closebrack+1;                        //increases closebracket count
+            }                                                   //end of if
+    
+        }                                                       //end of for
 
-        }
-
-        if (openbrack != closebrack){
-            check=false;
-            cout << "tag1" <<endl;  //test
-        }
-
+        if (openbrack != closebrack){                           //checks if the open and close bracket counts are equal
+            check=false;                                        //if not equal then sets check to false
+        }                                                       //end of if
 
 
-    }
+
+    }                                                           // end of if
 
 
 
 
 
     // checks if the first character is valid.
-    if (check==true){
-        if (input[0]=='+' || input[0]=='-'  || input[0]=='/'  || input[0]=='*' || input[0]==')' || input[input.length()-1]=='('){
-            check=false;
-        }
-    }
+    if (check==true){                                           // runs if the previous checks are satisfied
+        if (input[0]=='+' || input[0]=='-'  || input[0]=='/'  || input[0]=='*' || input[0]==')' || input[input.length()-1]=='('){  //sees if one of these characters is encountered first in the input
+            check=false;                                            //sets check to false
+        }                                                           //end of if
+    }                                                               //end of if
 
-    if (check==true){
+    //checks if the last character is valid
+    if (check==true){                                               //runs if the previous checks are satisfied
 
-        if (input[input.length()-1]=='+'||input[input.length()-1]=='-'||input[input.length()-1]=='*'||input[input.length()-1]=='/'){
-            check=false;
-        }
+        if (input[input.length()-1]=='+'||input[input.length()-1]=='-'||input[input.length()-1]=='*'||input[input.length()-1]=='/'){ //checks if one of these is found as the last character
+            check=false;                                //sets the check to false
+        }                                               //end of if
 
-    }
+    }                                                   //end of if
 
-    if (check==true){
-        bool signcheck=false;
-        bool numcheck=false;
-        for (int i=0; i<input.length(); i++){
-            if (input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i] == '/'){
-                signcheck=true;
-                for(int j=i; j<input.length();j++){
+    // checks if there is a number followed by all signs
+    if (check==true){                                   //runs if the previous checks are satisfied
+        bool signcheck=false;                           //var to check if an operator is encountered
+        bool numcheck=false;                            //var to check if a number is encountered
+        for (int i=0; i<input.length(); i++){           //loops through all the values in the input
+            if (input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i] == '/'){      //checks if an operator is encountered
+                signcheck=true;                             //sets sign to true
+                for(int j=i; j<input.length();j++){         //loops from where i leaves off to find a number
 
-                    if((int(input[j])>=48 && int (input[j])<=57)){
-                        numcheck=true;
-                    }
+                    if((int(input[j])>=48 && int (input[j])<=57)){      // checks if the character is a number
+                        numcheck=true;                                  //sets numcheck to true if number is found
+                    }                                                   // end of if
 
-                }
-            }
-
-
-        }
-        if (signcheck!=numcheck){
-            check=false;
-            cout << "tag2" <<endl; //test
-        }
+                }                                                       //end of for
+            }                                                           // end of if
 
 
-    }
+        }                                                               //end of for
+        if (signcheck!=numcheck){                                       //checks if the sign check is equal to numcheck
+            check=false;                                                //sets check to false
+        }                                                               // end of if
+
+
+    }                                                                   //end of if
 
 
 
 
     //checks that the expression doesnt have  " )( " and that it doesnt have a '3('
-    if (check==true){
+    if (check==true){                                       //runs if the previous checks were true
 
-        for (int i=0; i<input.length(); i++){
-            if (i!=input.length()-1){
-                if (input [i]==')' && input[i+1]=='('){
-                    check=false;
-                }
+        for (int i=0; i<input.length(); i++){               //loops through all the values
+            if (i!=input.length()-1){                       //checks if i is at the last index
+                if (input [i]==')' && input[i+1]=='('){     //checks if the character is a closed bracket and the next one is a open bracket
+                    check=false;                            //sets the check to false
+                }                                           //end of if
 
-                else if ((int(input[i])>=48 && int (input[i])<=57)&& input[i+1]=='('){
-                    check=false;
-                }
-                else if ((int(input[i+1])>=48 && int (input[i+1])<=57)&& input[i]==')'){
-                    check=false;
-                }
+                else if ((int(input[i])>=48 && int (input[i])<=57)&& input[i+1]=='('){          //checks if a number if followed by a openbracket
+                    check=false;                                            //sets check to false
+                }                                                           // end of if
+                else if ((int(input[i+1])>=48 && int (input[i+1])<=57)&& input[i]==')'){        //checks if a closed bracket is followed by a number
+                    check=false;                                                                //sets check to false
+                }                                                                               //end of if
 
-                else if ((input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/')&&(input[i+1]=='+'||input[i+1]=='-'||input[i+1]=='*'||input[i+1]=='/')){
-                    check=false;
-                }
-                else if ((input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/')&&(input[i+1]==')')){
-                    check=false;
-                }
-            }
-        }
-    }
+                else if ((input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/')&&(input[i+1]=='+'||input[i+1]=='-'||input[i+1]=='*'||input[i+1]=='/')){       //checks if two operators are beside eachother
+                    check=false;                          //  sets the check to false
+                }                                           //end of if
+                else if ((input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/')&&(input[i+1]==')')){  //checks if operator is followed by a open bracket
+                    check=false;                                                                            //sets check to false
+                }                           //end of if
+            }                               //end of if
+        }                                   //end of for
+    }                                       //end of if
 
     // checks if there is at least 1 number
-    if (check==true){
-        check=false;
-        for (int i=0;i<input.length();i++){
-            if (int(input[i])>=48 && int(input[i])<=57){
-                check=true;
-            }
-        }
-    }
+    if (check==true){                                   //runs if previous checks are true
+        check=false;                                    //presets check to false
+        for (int i=0;i<input.length();i++){             //loops through all the characters
+            if (int(input[i])>=48 && int(input[i])<=57){            //checks if there is a number
+                check=true;                                         //sets check to true
+            }                                                       //end of if
+        }                                                           //end of for
+    }                                                               //end of if
+
+
+    //checks if div and mul operators are preceded by a number    
+   if (check==true){                                                    //runs if the previous checks are true
+        for (int i=0; i<input.length(); i++){                           //loops through all the characters
+            if (input[i]=='/'||input[i]=='*'){                          //looks for multiplycation of division
+                check=false;                                            //presets check tofalse
+                for (int j=i; j>0;j--){                                 //counts back to find a number
+                    if (int(input[j-1])>=48 && int(input[j-1])<=57){                //if a number if found
+                        check=true;                                         //sets check to true
+                        break;                                          //breaks the loop
+                    }                                                   //end of if
+                    else if (input[j-1]=='+'||input[j-1]=='-'||input[j-1]=='*'||input[j-1]=='/'){       //if another operator is found
+                        check=false;            //sets check to false
+                        break;                  //breaks the loop
+                    }                           //end of if
+                }                               //end of for
+            }                                   //end of if
+        }                                       //end of for
+
+    }                                           //end of if
 
 
 
-   if (check==true){
-        for (int i=0; i<input.length(); i++){
-            if (input[i]=='/'||input[i]=='*'){
-                check=false;
-                for (int j=i; j>0;j--){
-                    if (int(input[j-1])>=48 && int(input[j-1])<=57){
-                        check=true;
-                        cout << "tag5" <<endl;  //test
-                        break;
-                    }
-                    else if (input[j-1]=='+'||input[j-1]=='-'||input[j-1]=='*'||input[j-1]=='/'){
-                        check=false;
-                        break;
-                    }
-                }
-            }
-        }
-
-    }
 
 
 
+    if (check==true){                       //creates the objects to parse into the tree if the previous checks are valid
+
+        input = insertBrackets(input);              //calls the brackets method to add brackets
+
+        ArithmeticExpression userInput(input);            // creates object of type arithmetic expression by sending in the input string
 
 
-
-    if (check==true){
-
-        input = insertBrackets(input);
-
-        ArithmeticExpression userInput(input);            // sends the input to Arithmetic expression
-
-
-        cout << "\n" << userInput.newExpression << endl;
+        cout << "\n" << userInput.newExpression << endl;            // outputs the string entered by the user
 
 <<<<<<< HEAD
         userInput.stringtoExpression(input);
@@ -365,6 +359,6 @@ int main(){                     // start of main
 >>>>>>> origin/master
 
        
-    }
-    return 0;
-}
+    }                                       //end of if
+    return 0;                               //return 
+}                                           //end of main
