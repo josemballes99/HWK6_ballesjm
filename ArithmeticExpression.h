@@ -42,14 +42,7 @@ public:
 
     string evaluate (); //evaluate left expression and right expression
     
-    void print(){
-        tree.append(1,'(');
-        tree.append(1,symbol);
-        tree.append(1,' ');
-        left->print();
-        right->print();
-        tree.append(1,')');
-    }
+    void print(){}
     
     void release(){
         left->release();

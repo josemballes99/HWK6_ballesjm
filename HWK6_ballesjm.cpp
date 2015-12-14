@@ -357,7 +357,7 @@ int main(){
 
         cout << "\n" << userInput.newExpression << endl;
 
-        //userInput.stringtoExpression(input);
+        userInput.stringtoExpression(input);
 
         //cout << "\n" << userInput.newExpression << endl;
 

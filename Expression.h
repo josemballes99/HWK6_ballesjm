@@ -26,7 +26,7 @@ public:
     //variables
     string newExpression;
     string value;
-    string tree;
+
     
     //Default Constructor
     Expression();
@@ -44,19 +44,6 @@ public:
     virtual void print(){};
     virtual void release(){}
     
-};
-
-class Term: public Expression {
-public:
-    Term(string v){
-        value = v;
-    }
-    void print(){
-        tree.append(" ");
-        tree.append(value);
-        tree.append(" ");
-    }
-    void release(){}
 };
 
 #endif /* Expression_h */

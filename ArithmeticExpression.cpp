@@ -21,7 +21,7 @@ ArithmeticExpression::ArithmeticExpression(char sym, Expression* le, Expression*
 
 ArithmeticExpression::~ArithmeticExpression(){}
 
-Expression* stringtoExpression(string &str){
+ArithmeticExpression* stringtoExpression(string &str){
     int level = 0;//inside parentheses check
     //case + or -
     //most right '+' or '-' (but not inside '()') search and split
