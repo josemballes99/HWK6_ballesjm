@@ -21,10 +21,10 @@
 
 using namespace std;
 
-////Multiply two expression
+//Multiply two expression
 //class Multiplication: public ArithmeticExpression {
-//    string evaluate(){ ... }
-//    void print(){ ... } // (left `*` right)
+//    string evaluate(){}
+//    void print(){} // (left `*` right)
 //};
 
 

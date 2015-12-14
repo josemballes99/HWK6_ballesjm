@@ -13,77 +13,8 @@ ArithmeticExpression::ArithmeticExpression(Expression input){
     
 }
 
-ArithmeticExpression::ArithmeticExpression(char sym, Expression* le, Expression* re){
-    symbol = sym;
-    left = le;
-    right = re;
-}
-
 ArithmeticExpression::~ArithmeticExpression(){}
 
-ArithmeticExpression* stringtoExpression(string &str){
-    int level = 0;//inside parentheses check
-    //case + or -
-    //most right '+' or '-' (but not inside '()') search and split
-    for(int i = (str.size()-1);i>=0;--i) {
-        char c = str[i];
-        if(c == ')'){
-            ++level;
-            continue;
-        }
-        if(c == '('){
-            --level;
-            continue;
-        }
-        if(level>0) continue;
-        if((c == '+' || c == '-') && i!=0 ){//if i==0 then s[0] is sign
-            string L(str.substr(0,i));
-            string R(str.substr(i+1));
-            return new ArithmeticExpression(c, stringtoExpression(L), stringtoExpression(R));
-        }
-    }
-    //case * or /
-    //most right '*' or '/' (but not inside '()') search and split
-    for(int i = (str.size()-1); i>=0; --i){
-        char c = str[i];
-        if(c == ')'){
-            ++level;
-            continue;
-        }
-        if(c == '('){
-            --level;
-            continue;
-        }
-        if(level>0) continue;
-        if(c == '*' || c == '/'){
-            string L(str.substr(0,i));
-            string R(str.substr(i+1));
-            return new ArithmeticExpression(c, stringtoExpression(L), stringtoExpression(R));
-        }
-    }
-    if(str[0]=='('){
-        //case ()
-        //pull out inside and to strToExp
-        for(int i=0;i<str.size();++i){
-            if(str[i]=='('){
-                ++level;
-                continue;
-            }
-            if(str[i]==')'){
-                --level;
-                if(level==0){
-                    string exp(str.substr(1, i-1));
-                    return stringtoExpression(exp);
-                }
-                continue;
-            }
-        }
-    } else
-        //case value
-        return new Term(str);
-    cerr << "Error:never execute point" << endl;
-    return NULL;//never
-}
 
 //string ArithmeticExpression::evaluate(){
 //    
@@ -123,42 +54,42 @@ ArithmeticExpression* stringtoExpression(string &str){
 //            
 //            string newa = newleftside->evaluate();
 //            string newb = newrightside->evaluate();
-////            for(int i=0; i<newa.length();i++){
-////                if(newa[i]=='+'|| newa[i]=='-'){
-////                    
-////                }
-////                else if (<#condition#>){
-////                    
-////                }
-////                else {                                                        //TODO: Figure shit out
-////                    
-////                }
-////            }
+//            for(int i=0; i<newa.length();i++){
+//                if(newa[i]=='+'|| newa[i]=='-'){
+//                    
+//                }
+//                else if (<#condition#>){
+//                    
+//                }
+//                else {
+//                    
+//                }
+//            }
 //            
 //        }
 //        else if (newExpression[checkindexPM] == '-'){
 //            
-//            Subtraction addstr(a,b);
+//            //Subtraction addstr(a,b);
 //            
-//            Subtraction newls(a);
-//            Subtraction newrs(b);
+//            //Subtraction newls(a);
+//            //Subtraction newrs(b);
 //            
-//            ArithmeticExpression *newleftside = &newls;
-//            ArithmeticExpression *newrightside= &newrs;
+//            //ArithmeticExpression *newleftside = &newls;
+//            //ArithmeticExpression *newrightside= &newrs;
 //            
 //            string newa = newleftside->evaluate();
 //            string newb = newrightside->evaluate();
-//            //            for(int i=0; i<newa.length();i++){
-//            //                if(newa[i]=='+'|| newa[i]=='-'){
-//            //
-//            //                }
-//            //                else if (<#condition#>){
-//            //
-//            //                }
-//            //                else {                                                        //TODO: Figure shit out
-//            //                    
-//            //                }
-//            //            }
+//                        for(int i=0; i<newa.length();i++){
+//                            if(newa[i]=='+'|| newa[i]=='-'){
+//            
+//                            }
+//                            else if (<#condition#>){
+//            
+//                            }
+//                            else {
+//                                
+//                            }
+//                        }
 //        }
 //        
 //    }
@@ -198,17 +129,16 @@ ArithmeticExpression* stringtoExpression(string &str){
 //            
 //            string newa = newleftside->evaluate();
 //            string newb = newrightside->evaluate();
-//            //            for(int i=0; i<newa.length();i++){
-//            //                if(newa[i]=='+'|| newa[i]=='-'){
-//            //
-//            //                }
-//            //                else if (<#condition#>){
-//            //
-//            //                }
-//            //                else {                                                        //TODO: Figure shit out
-//            //
-//            //                }
-//            //            }
+//                        for(int i=0; i<newa.length();i++){
+//                            if(newa[i]=='+'|| newa[i]=='-'){
+//            
+//                            }
+//                            else if (<#condition#>){
+//            
+//                            }
+//                            else {
+//                            }
+//                        }
 //            
 //        }
 //        else if (newExpression[checkindexMD] == '/'){
@@ -223,17 +153,17 @@ ArithmeticExpression* stringtoExpression(string &str){
 //            
 //            string newa = newleftside->evaluate();
 //            string newb = newrightside->evaluate();
-//            //            for(int i=0; i<newa.length();i++){
-//            //                if(newa[i]=='+'|| newa[i]=='-'){
-//            //
-//            //                }
-//            //                else if (<#condition#>){
-//            //
-//            //                }
-//            //                else {                                                        //TODO: Figure shit out
-//            //                    
-//            //                }
-//            //            }
+//                        for(int i=0; i<newa.length();i++){
+//                            if(newa[i]=='+'|| newa[i]=='-'){
+//            
+//                            }
+//                            else if (<#condition#>){
+//            
+//                            }
+//                            else {
+//                                
+//                            }
+//                        }
 //        }
 //        
 //    }
