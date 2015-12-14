@@ -116,41 +116,41 @@ string stripSpace(string express)
 
 
 
-int main(){
-    string input;
-    bool check =true;
-    int openbrack=0;
-    int closebrack=0;
-    cout << "Please Enter an expression: ";
-    getline(cin,input);
+int main(){                     // start of main
+    string input;               //var to hold the input from the user
+    bool check =true;           //boolean to check if the input is valid
+    int openbrack=0;            //var to count the number of open brackets
+    int closebrack=0;           //var to count the number of closed brackets
+    cout << "Please Enter an expression: ";         // prompt to user
+    getline(cin,input);                             //gets the user input and stres in the var input
 
 
     // checks if all the characters are valid characters including spaces
-    if (check==true){
-            for (int i=0; i<input.length();i++){
-                    if ((int(input[i]) < 40 && int(input[i])!= 32) || int(input[i]) > 57 || int(input[i])==44 || int(input[i])==46){
-                        check=false;
-                    }
-            }
+    if (check==true){                               //start of if structure if check is set to true
+            for (int i=0; i<input.length();i++){            //loops through all the values in the input string
+                    if ((int(input[i]) < 40 && int(input[i])!= 32) || int(input[i]) > 57 || int(input[i])==44 || int(input[i])==46){            //checks if the input string contains the valid characters by comparing with ascii values
+                        check=false;                //sets check to false if an improper character is encountered
+                    }                           //end of if
+            }                                   //end of for
 
-    }
+    }                                           //end of if
 
 
 
-    if (check==true){
-    bool spacecheck=false;
-    int whiteindex=0;
-    char l;
+    if (check==true){                           //executes the next validation check only if the check variable is still set to true
+    bool spacecheck=false;                      // var set to true if a space is encountered
+    int whiteindex=0;                           //var to hold the index of the white space
+    char l;                                     // variable char l to hold the left character before the operand
 
         for (int i=0;i<input.length();i++){         //checks if the string has any whitespaces
-            if (int(input[i])==32){
-                spacecheck=true;
-            }
-        }
+            if (int(input[i])==32){                 //checks if the ascii value matches the ascii value of a space
+                spacecheck=true;                    //sets to spacecheck to true
+            }                                       //end of if
+        }                                           //end of for
 
         if (spacecheck==true && (int(input[0])==32 || int(input[input.length()]==32))){  // if there are white spaces then makes sure they are not first and last characters
-            check=false;
-        }
+            check=false;                                                                //sets check to false
+        }                                                                               //end of if
 
 
         //checks to see white space only exists between operands and operators
@@ -158,14 +158,13 @@ int main(){
             check=false;                                        //presets check to false
 
             for (int i=0; i<input.length(); i++){               //goes through all the values
-                cout << "loop" << endl;
                 if(int(input[i])!=32&&whiteindex==0){           //if a value is found that is not empty and the whiteindex is 0
-                    int c=i;
-                    if (input[i]==')'){
-                        while(int(input[c])<48||int(input[c])>57){
-                            c--;
-                        }
-                    }
+                    int c=i;                                    // sets counter var c to the index i (so the value of i is not chenged when counting back)
+                    if (input[i]==')'){                         //checks if the input is an closed bracket
+                        while(int(input[c])<48||int(input[c])>57){          //while loop counts back till it encounters a number
+                            c--;                                // reduces the counter c each time
+                        }                                       //end of while
+                    }                                           //end of if
                     l=input[c];                                 // then this becomes the left side character
                     cout << "leftside"<<endl;
                 }
@@ -357,12 +356,8 @@ int main(){
 
         cout << "\n" << userInput.newExpression << endl;
 
-        //userInput.stringtoExpression(input);
 
-        //cout << "\n" << userInput.newExpression << endl;
-
-
-        //ArithmeticExpression bracketinput(userInput);
+       
     }
     return 0;
 }
