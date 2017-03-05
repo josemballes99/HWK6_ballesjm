@@ -25,31 +25,32 @@
 
 using namespace std;
 
-string insertBrackets(string input) //This function adds brackets to conserve BEDMASS
+//Function inser brackets at proper position and then return the expression
+string insertBrackets(string input)
 {
 
     /*
      CASE ONE --> '*' or '/' followed by a bracket
      */
 
-    for(size_t i = 0; i < input.length(); i++) { //  loop through the string
+    for(size_t i = 0; i < input.length(); i++) { 
         if((input.at(i) == '*') || (input.at(i) == '/')) {
             if(input.at(i+1) == '(') {  // finds the first open bracket if it is right beside it
 
-                size_t j = i; // initalize j and k to have the same value in the string as i
+                size_t j = i;
                 size_t k = i;
 
                 while(input.at(j) != ')') { // looks for the closed brackets
-                    j++;    //increases j by one
+                    j++; 
                 }
                 if(input.at(j) == ')') {    // inserts the closed bracket after the closed bracket
                     input.insert(j+1, 1, ')');
                 }
 
-
+                //this do while loop decrements the k value until it reaches the operator
                 do {
                     k--;
-                } while ((input.at(k) != '+') && (input.at(k) != '-') && (input.at(k) != '*') && (input.at(k) != '/') && (k != 0)); //this do while loop decrements the k value until it reaches the operator
+                } while ((input.at(k) != '+') && (input.at(k) != '-') && (input.at(k) != '*') && (input.at(k) != '/') && (k != 0)); 
 
 
                 if (((input.at(k) == '+') || (input.at(k) == '-')|| (input.at(k) == '*') || (input.at(k) == '/')) && (input.at(k-1) != '(')) { //covers a case where it inserts the open bracket where there is a negative
@@ -73,31 +74,36 @@ string insertBrackets(string input) //This function adds brackets to conserve BE
      */
 
 
-    for (int i = 0; i < input.length(); i++){   // loop through the string one more time
+    for (int i = 0; i < input.length(); i++){
         if (((input.at(i) == '+') || (input.at(i) == '-')) && (input.at(i-1) != '(')) { // check for + and - where negatives are not present
-            input.insert(i+1,1,'(');    //insert open bracket infront
-            input.insert(i,1,')');      //insert closed bracket behind
+            //insert proper brackets at proper location
+            input.insert(i+1,1,'(');   
+            input.insert(i,1,')');     
+            i++;
+        }
+    }
+    //inser brackets at beginning and the end
+    input.insert(0,1,'(');  
+    input.insert(input.length(),1,')'); 
+
+    for (int i = 0; i < input.length(); i++) {
+        //look for multiplication or division signs where a  closed bracket is not present behind it
+        //and then insert brackets properly
+        if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i-1) == ')')) { 
+            
+            input.insert(i+1,1,'(');
+            input.insert(i,1,')'); 
+            i++;
+        }
+        //same as the upper one but with a open bracket infront of it and then insert brackets properly
+        else if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i+1) == '(')) {  
+            input.insert(i+1,1,'(');        
+            input.insert(i,1,')');          
             i++;
         }
     }
 
-    input.insert(0,1,'(');  //insert the open bracket at the beginning
-    input.insert(input.length(),1,')'); //insert the closed bracket at the end
-
-    for (int i = 0; i < input.length(); i++) {  //loop through the string once again
-        if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i-1) == ')')) { //look for multiplication or division signs where a  closed bracket is not present behind it
-            input.insert(i+1,1,'(');    //insert open bracket infront
-            input.insert(i,1,')');      //insert clode bracket behind
-            i++;
-        }
-        else if (((input.at(i) == '*') || (input.at(i) == '/')) && (input.at(i+1) == '(')) {  //same as the upper one but with a open bracket infront of it
-            input.insert(i+1,1,'(');        //insert open bracket infront
-            input.insert(i,1,')');          //insert closed bracket behind
-            i++;
-        }
-    }
-
-    return input;       //return the string with the brackets inputted
+    return input;
 }
 
 string stripSpace(string express)   //this function will get rid of all the spaced in the inputted string
